@@ -9,5 +9,3 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 COPY . .
 CMD ["flask", "run"]
-CMD ["python", "yahoo_companies.py"]
-CMD ["python", "yahoo_finance_history.py"]

@@ -4,6 +4,10 @@ services:
     build: .
     ports:
       - "8000:5000"
+  my-python-files:
+    build: .
+    command: python yahoo_companies.py yahoo_finance_history.py yahoo_finance_summary_scrapping.py  
+     
   redis:
     image: "redis:alpine"
 
