@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:1
 FROM python:3.7-alpine
+Run pip install --upgrade cython
 RUN pip install --upgrade pip
 WORKDIR /code
 ENV FLASK_APP=app.py
@@ -10,3 +11,4 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 COPY . .
 CMD ["flask", "run"]
+
